@@ -1,7 +1,7 @@
 {
     "name": "Version in Titlebar",
     "author": "fieldOfView",
-    "version": "1.0.0",
+    "version": "3.5",
     "description": "Adds the application version to the titlebar",
-    "api": 4
+    "api": 5
 }

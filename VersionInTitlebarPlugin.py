@@ -14,6 +14,10 @@ class VersionInTitlebarPlugin(Extension):
 
     def _engineCreated(self):
         # set window title
-        mainWindow = self._application._engine.rootObjects()[0]
+        try:
+        	engine = Application.getInstance()._qml_engine
+        except AttributeError:
+        	engine = Application.getInstance()._engine
+        mainWindow = engine.rootObjects()[0]
         mainWindow.setTitle(mainWindow.title() + " " + self._version_string)
 
